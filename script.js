@@ -23,8 +23,8 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
 // links for a public portfolio, because visitors would need your organization's access.
 const powerBiReports = {
   panic: { title: 'Panic Attack Analysis', url: 'https://app.powerbi.com/view?r=eyJrIjoiNzU4NWUyYjQtMWE3OC00OTIzLWI2MWQtMmFlMGFlN2MyOTQ2IiwidCI6IjkxNjM1MTAzLTM4YmMtNGU2MC04NDg2LWIyYzFlNjAxNjNiNiJ9' },
-  espn: { title: 'ESPN Cricket Analysis', url: '' },
-  adventure: { title: 'Adventure Works Dashboard', url: '' },
+  espn: { title: 'ESPN Cricket Analysis', url: 'https://app.powerbi.com/view?r=eyJrIjoiNjdmZGUzYTUtOTUxNC00YjEzLTk2MzItOTM4ZmJlNDRhZWEwIiwidCI6IjkxNjM1MTAzLTM4YmMtNGU2MC04NDg2LWIyYzFlNjAxNjNiNiJ9' },
+  adventure: { title: 'Adventure Works Dashboard', url: 'https://app.powerbi.com/view?r=eyJrIjoiOGYwNWMwYTMtMWNjZS00YWFlLWJiY2QtMTE3YzQ5OTkxYzhhIiwidCI6IjkxNjM1MTAzLTM4YmMtNGU2MC04NDg2LWIyYzFlNjAxNjNiNiJ9' },
 };
 
 const reportTabs = document.querySelectorAll('[data-report]');
