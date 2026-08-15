@@ -22,7 +22,7 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
 // Paste only public Power BI “Publish to web” links here. Do not use secure/internal
 // links for a public portfolio, because visitors would need your organization's access.
 const powerBiReports = {
-  panic: { title: 'Panic Attack Analysis', url: '' },
+  panic: { title: 'Panic Attack Analysis', url: 'https://app.powerbi.com/view?r=eyJrIjoiNzU4NWUyYjQtMWE3OC00OTIzLWI2MWQtMmFlMGFlN2MyOTQ2IiwidCI6IjkxNjM1MTAzLTM4YmMtNGU2MC04NDg2LWIyYzFlNjAxNjNiNiJ9' },
   espn: { title: 'ESPN Cricket Analysis', url: '' },
   adventure: { title: 'Adventure Works Dashboard', url: '' },
 };
