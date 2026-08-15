@@ -19,6 +19,38 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   });
 }));
 
+// Paste only public Power BI “Publish to web” links here. Do not use secure/internal
+// links for a public portfolio, because visitors would need your organization's access.
+const powerBiReports = {
+  panic: { title: 'Panic Attack Analysis', url: '' },
+  espn: { title: 'ESPN Cricket Analysis', url: '' },
+  adventure: { title: 'Adventure Works Dashboard', url: '' },
+};
+
+const reportTabs = document.querySelectorAll('[data-report]');
+const powerBiFrame = document.querySelector('#powerbi-embed');
+const embedStatus = document.querySelector('#embed-status');
+
+reportTabs.forEach(tab => tab.addEventListener('click', () => {
+  const report = powerBiReports[tab.dataset.report];
+  reportTabs.forEach(item => {
+    const selected = item === tab;
+    item.classList.toggle('active', selected);
+    item.setAttribute('aria-selected', String(selected));
+  });
+  powerBiFrame.title = `Interactive Power BI dashboard: ${report.title}`;
+  if (report.url) {
+    powerBiFrame.src = report.url;
+    powerBiFrame.hidden = false;
+    embedStatus.hidden = true;
+  } else {
+    powerBiFrame.removeAttribute('src');
+    powerBiFrame.hidden = true;
+    embedStatus.hidden = false;
+    embedStatus.querySelector('p').textContent = `${report.title.toUpperCase()} · EMBED LINK REQUIRED`;
+  }
+}));
+
 document.querySelector('#inquiry-form')?.addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
